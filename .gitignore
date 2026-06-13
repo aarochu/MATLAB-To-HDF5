@@ -1,0 +1,23 @@
+# Python generated files
+__pycache__/
+*.py[cod]
+
+# MATLAB and HDF5 waveform data
+*.mat
+*.h5
+*.hdf5
+
+# Dataset/export logs
+*.log
+log.txt
+log_*.txt
+
+# Local environments
+.venv/
+venv/
+env/
+
+# OS/editor noise
+.DS_Store
+Thumbs.db
+.vscode/
