@@ -1,6 +1,6 @@
 # MATLAB to HDF5 Converter
 
-Python utility for converting batches of MATLAB `.mat` waveform files into HDF5 files. This was built for continuous waveform data, such as partial discharge measurements, that are split across many MATLAB files.
+Python utility for converting batches of MATLAB `.mat` waveform files into HDF5 files. This is useful for continuous waveform data that is split across many MATLAB files.
 
 ## What It Does
 
@@ -46,7 +46,7 @@ Inside the HDF5 file, each MATLAB file is stored under:
 Example:
 
 ```text
-/files/Aq_20260413_152904_5/
+/files/waveform_capture_001/
 ```
 
 ## Convert One MATLAB File
@@ -72,8 +72,8 @@ python -c "from pathlib import Path; import convert_mat_to_hdf5 as c; mat_files 
 Example:
 
 ```text
-Corona discharges\Aq_20260413_152904_5.mat
-Corona discharges\Aq_20260413_152904_5.h5
+waveforms\waveform_capture_001.mat
+waveforms\waveform_capture_001.h5
 ```
 
 ## Useful Options
@@ -109,10 +109,10 @@ Combined output:
 ```text
 waveforms.h5
 └── files
-    ├── Aq_20260413_152904_1
+    ├── waveform_capture_001
     │   ├── <matlab_variable>
     │   └── ...
-    └── Aq_20260413_152904_5
+    └── waveform_capture_002
         ├── <matlab_variable>
         └── ...
 ```
